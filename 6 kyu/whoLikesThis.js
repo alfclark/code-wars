@@ -42,3 +42,25 @@ function likes(names) {
   }
   
   likes(['Alex', 'Jacob', 'Mark', 'Max'])
+
+
+  // TERNIARY
+
+  function likes(names) {
+    let msg = ""
+    names.length === 0 ? msg = "no one likes this" : msg
+    names.length === 1 ? msg = `${names[0]} likes this` : msg
+    names.length === 2 ? msg = `${names[0]} and ${names[1]} like this` : msg
+    names.length === 3 ? msg = `${names[0]}, ${names[1]} and ${names[2]} like this` : msg
+    names.length > 3 ? msg = `${names[0]}, ${names[1]} and ${names.length - 2} others like this` : msg
+    
+    
+    console.log(msg)
+    return msg
+  }
+  
+  likes([])
+  likes(['Peter'])
+  likes(['Jacob', 'Alex'])
+  likes(['Max', 'John', 'Mark'])
+  likes(['Alex', 'Jacob', 'Mark', 'Max'])
